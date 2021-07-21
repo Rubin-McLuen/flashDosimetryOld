@@ -1,0 +1,46 @@
+#DetectorBase1
+/gate/world/daughters/name                         OpticalSystem
+/gate/world/daughters/insert                       box
+/gate/OpticalSystem/geometry/setXLength            8 mm
+/gate/OpticalSystem/geometry/setYLength            4 mm
+/gate/OpticalSystem/geometry/setZLength            2 mm
+/gate/OpticalSystem/placement/setTranslation       0 2 -5 mm
+/gate/OpticalSystem/vis/setColor                   blue
+
+#DetectorCrystal1
+/gate/OpticalSystem/daughters/name                 detectorCrystal1
+/gate/OpticalSystem/daughters/insert               box
+/gate/detectorCrystal1/geometry/setXLength         8 mm
+/gate/detectorCrystal1/geometry/setYLength         4 mm
+/gate/detectorCrystal1/geometry/setZLength         .5 mm
+/gate/detectorCrystal1/placement/setTranslation    0 0 .75 mm
+/gate/systems/OpticalSystem/crystal/attach        detectorCrystal1
+
+#DetectorPixels1
+/gate/detectorCrystal1/daughters/name            detectorPixels1
+/gate/detectorCrystal1/daughters/insert            box
+/gate/detectorPixels1/geometry/setXLength            .4 mm
+/gate/detectorPixels1/geometry/setYLength            .4 mm
+/gate/detectorPixels1/geometry/setZLength            .5 mm
+/gate/detectorPixels1/vis/forceSolid
+/gate/detectorPixels1/placement/enable
+/gate/detectorPixels1/repeaters/insert            cubicArray
+/gate/detectorPixels1/cubicArray/setRepeatVector        5 0 0 mm
+/gate/detectorPixels1/cubicArray/setRepeatNumberX        1
+/gate/detectorPixels1/cubicArray/setRepeatNumberY        1
+/gate/detectorPixels1/cubicArray/setRepeatNumberZ        16
+/gate/detectorPixels1/attachCrystalSD
+/gate/systems/OpticalSystem/pixel/attach        detectorPixels1
+/gate/detectorPixels1/vis/setColor                blue
+
+
+
+#DetectorBase2
+/gate/world/daughters/name                         DetectorBase2
+/gate/world/daughters/insert                       box
+/gate/DetectorBase2/geometry/setXLength            2 mm
+/gate/DetectorBase2/geometry/setYLength            4 mm
+/gate/DetectorBase2/geometry/setZLength            8 mm
+/gate/DetectorBase2/placement/setTranslation       5 2 0 mm
+/gate/DetectorBase2/vis/setColor                   red
+
