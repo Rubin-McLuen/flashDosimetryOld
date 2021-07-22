@@ -27,7 +27,7 @@
 #Plate
 /gate/world/daughters/name                          plate
 /gate/world/daughters/insert                        tessellated
-/gate/plate/geometry/setPathToSTLFile               STLObjects/Plate.stl
+/gate/plate/geometry/setPathToSTLFile               STLObjects/PlateV2.stl
 /gate/plate/placement/setTranslation                0 0 0 mm
 /gate/plate/setMaterial                             PlateScintX
 
@@ -35,7 +35,7 @@
 /gate/world/daughters/name                                        fibers
 /gate/world/daughters/insert                                      tessellated
 /gate/fibers/placement/setTranslation                         0 0 0 mm
-/gate/fibers/geometry/setPathToSTLFile                        STLObjects/Fibers.stl
+/gate/fibers/geometry/setPathToSTLFile                        STLObjects/FibersV2.stl
 /gate/fibers/setMaterial                                      FiberScintX
 
 #Detector Base
