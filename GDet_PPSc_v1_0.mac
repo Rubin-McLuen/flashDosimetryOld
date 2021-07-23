@@ -11,7 +11,7 @@
 /vis/scene/endOfEventAction             accumulate
 /vis/scene/endOfEventAction accumulate  5000
 
-#/control/execute Macro/Verbose.mac
+/control/execute Macro/Verbose.mac
 #---------------------------------------
 #World
 #---------------------------------------
@@ -29,14 +29,14 @@
 /gate/world/daughters/insert                        tessellated
 /gate/plate/geometry/setPathToSTLFile               STLObjects/PlateV2.stl
 /gate/plate/placement/setTranslation                0 0 0 mm
-/gate/plate/setMaterial                             BCF-92
+/gate/plate/setMaterial                             PlateScintX
 
 #Fibers
 /gate/world/daughters/name                                        fibers
 /gate/world/daughters/insert                                      tessellated
 /gate/fibers/placement/setTranslation                         0 0 0 mm
 /gate/fibers/geometry/setPathToSTLFile                        STLObjects/FibersV2.stl
-/gate/fibers/setMaterial                                      BCF-12
+/gate/fibers/setMaterial                                      FiberScintX
 
 #Detector Base
 /gate/world/daughters/name                OpticalSystem_1
@@ -149,29 +149,36 @@
 #Actor
 #-
 #Energy
-/gate/actor/addActor  EnergySpectrumActor                MyActor
-/gate/actor/MyActor/save                                 Output/plateoutput.root
-/gate/actor/MyActor/attachTo                             plate
-/gate/actor/MyActor/energySpectrum/setEmin               2 eV
-/gate/actor/MyActor/energySpectrum/setEmax               5 eV
-/gate/actor/MyActor/energySpectrum/setNumberOfBins       2000
+#/gate/actor/addActor  EnergySpectrumActor                MyActor
+#/gate/actor/MyActor/save                                 Output/plateoutput.root
+#/gate/actor/MyActor/attachTo                             plate
+#/gate/actor/MyActor/energySpectrum/setEmin               2 eV
+#/gate/actor/MyActor/energySpectrum/setEmax               5 eV
+#/gate/actor/MyActor/energySpectrum/setNumberOfBins       2000
 
-#/gate/actor/addActor  EnergySpectrumActor                MyActor2
-#/gate/actor/MyActor2/save                                 Output/fiberoutput.root
-#/gate/actor/MyActor2/attachTo                             OpticalSystem_1
-#/gate/actor/MyActor2/energySpectrum/setEmin               2 eV
-#/gate/actor/MyActor2/energySpectrum/setEmax               5 eV
-#/gate/actor/MyActor2/energySpectrum/setNumberOfBins       2000
+/gate/actor/addActor  EnergySpectrumActor                MyActor2
+/gate/actor/MyActor2/save                                 Output/fiberoutput.root
+/gate/actor/MyActor2/attachTo                             OpticalSystem_1
+/gate/actor/MyActor2/energySpectrum/setEmin               2 eV
+/gate/actor/MyActor2/energySpectrum/setEmax               5 eV
+/gate/actor/MyActor2/energySpectrum/setNumberOfBins       2000
 
-/gate/actor/addActor                        DoseActor   initEdep
-/gate/actor/initEdep/saveEveryNEvents       1
-/gate/actor/initEdep/enableEdep             true
-/gate/actor/initEdep/enableDose             true
-/gate/actor/initEdep/enableNumberOfHits     true
-/gate/actor/initEdep/attachTo               plate
-/gate/actor/initEdep/setResolution          40 24 40
-/gate/actor/initEdep/stepHitType            random
-/gate/actor/initEdep/save                   Output/initEdep.txt
+/gate/actor/addActor  EnergySpectrumActor                MyActor3
+/gate/actor/MyActor3/save                                 Output/fiberoutput.root
+/gate/actor/MyActor3/attachTo                             OpticalSystem_1
+/gate/actor/MyActor3/energySpectrum/setEmin               2 eV
+/gate/actor/MyActor3/energySpectrum/setEmax               5 eV
+/gate/actor/MyActor3/energySpectrum/setNumberOfBins       2000
+
+#/gate/actor/addActor                        DoseActor   initEdep
+#/gate/actor/initEdep/saveEveryNEvents       1
+#/gate/actor/initEdep/enableEdep             true
+#/gate/actor/initEdep/enableDose             true
+#/gate/actor/initEdep/enableNumberOfHits     true
+#/gate/actor/initEdep/attachTo               plate
+#/gate/actor/initEdep/setResolution          40 24 40
+#/gate/actor/initEdep/stepHitType            random
+#/gate/actor/initEdep/save                   Output/initEdep.txt
 
 /gate/actor/addActor    ParticleInVolumeActor        ParticleCounter2
 /gate/actor/ParticleCounter2/save                    Output/ParticleCounter2.txt
@@ -195,13 +202,13 @@
 /gate/fibers/surfaces/insert                     world
 /gate/fibers/surfaces/world_to_fibers/setSurface    rough_teflon_wrapped
 
-#/gate/detectorPixel_1/surfaces/name                            ep2
-#/gate/detectorPixel_1/surfaces/insert                          fibers
-#/gate/detectorPixel_1/surfaces/ep2/setSurface                  perfect_apd
+/gate/detectorPixel_1/surfaces/name                            ep2
+/gate/detectorPixel_1/surfaces/insert                          fibers
+/gate/detectorPixel_1/surfaces/ep2/setSurface                  perfect_apd
 
-#/gate/detectorPixel_2/surfaces/name                            ep2
-#/gate/detectorPixel_2/surfaces/insert                          fibers
-#/gate/detectorPixel_2/surfaces/ep2/setSurface                  perfect_apd
+/gate/detectorPixel_2/surfaces/name                            ep2
+/gate/detectorPixel_2/surfaces/insert                          fibers
+/gate/detectorPixel_2/surfaces/ep2/setSurface                  perfect_apd
 
 
 #/gate/plate/surfaces/name                       world_to_plate
@@ -241,7 +248,7 @@
 /gate/source/BeamS/attachTo          sourceBlock
 #/gate/source/BeamS/gps/polarization  1 0 0
 
-/gate/application/setTotalNumberOfPrimaries 1
+/gate/application/setTotalNumberOfPrimaries 50
 
 
 #-

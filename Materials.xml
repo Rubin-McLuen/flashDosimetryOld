@@ -1168,10 +1168,10 @@ not distinguish between 'original' photons and WLS photons. -->
         <ve energy="2.859"  value="0.003"/>
         </propertyvector>
      <propertyvector name="RINDEX" energyunit="eV">
-        <ve energy="5.42" value="1.2"/>
-        <ve energy="2.85" value="1.2"/>
+        <ve energy="5.42" value="1.585"/>
+        <ve energy="2.85" value="1.585"/>
       </propertyvector>
-      <propertyvector name="ABSLENGTH" unit="cm" energyunit="eV">
+      <propertyvector name="ABSLENGTH" unit="m" energyunit="eV">
         <ve energy="1.84" value="50"/>
         <ve energy="2.44" value="50"/>
       </propertyvector>
@@ -1211,7 +1211,7 @@ not distinguish between 'original' photons and WLS photons. -->
         <ve energy="3.968"  value="1.035"/>
         <ve energy="3.950"  value="1.092"/>
      </propertyvector>
-      <propertyvector name="WLSABSLENGTH" unit="cm" energyunit="eV">
+      <propertyvector name="WLSABSLENGTH" unit="m" energyunit="eV">
         <ve energy="4.828"  value="23.641"/>
         <ve energy="4.801"  value="21.459"/>
         <ve energy="4.775"  value="19.342"/>
@@ -1304,7 +1304,7 @@ not distinguish between 'original' photons and WLS photons. -->
         <ve energy="2.398"  value="4.059"/>
         <ve energy="2.398"  value="0.25"/>
       </propertyvector>
-      <propertyvector name="ABSLENGTH" unit="cm" energyunit="eV">
+      <propertyvector name="ABSLENGTH" unit="m" energyunit="eV">
         <ve energy="1.84" value="50"/>
         <ve energy="2.44" value="50"/>
       </propertyvector>
@@ -1348,7 +1348,7 @@ not distinguish between 'original' photons and WLS photons. -->
         <ve energy="3.256"  value="0.595"/>
         <ve energy="3.231"  value="0.607"/>
      </propertyvector>
-      <propertyvector name="WLSABSLENGTH" unit="cm" energyunit="eV">
+      <propertyvector name="WLSABSLENGTH" unit="m" energyunit="eV">
         <ve energy="4.550"  value="24.510"/>
         <ve energy="4.553"  value="1.336"/>
         <ve energy="4.491"  value="1.131"/>
