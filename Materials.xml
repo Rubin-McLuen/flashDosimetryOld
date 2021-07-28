@@ -1127,7 +1127,7 @@ not distinguish between 'original' photons and WLS photons. -->
     
       <material name="PlateScintX">
     <propertiestable>
-      <property name="SCINTILLATIONYIELD" value="6000" unit="1/MeV"/>
+      <property name="SCINTILLATIONYIELD" value="1000" unit="1/MeV"/>
       <property name="RESOLUTIONSCALE" value="10"/>
       <property name="FASTTIMECONSTANT" value="20" unit="ns"/>
       <property name="YIELDRATIO" value="1"/>
@@ -1171,7 +1171,7 @@ not distinguish between 'original' photons and WLS photons. -->
         <ve energy="5.42" value="1.585"/>
         <ve energy="2.85" value="1.585"/>
       </propertyvector>
-      <propertyvector name="ABSLENGTH" unit="m" energyunit="eV">
+      <propertyvector name="ABSLENGTH" unit="cm" energyunit="eV">
         <ve energy="1.84" value="50"/>
         <ve energy="2.44" value="50"/>
       </propertyvector>
@@ -1253,7 +1253,7 @@ not distinguish between 'original' photons and WLS photons. -->
  
   <material name="FiberScintX">
     <propertiestable>
-      <property name="SCINTILLATIONYIELD" value="6000" unit="1/MeV"/>
+      <property name="SCINTILLATIONYIELD" value="1000" unit="1/MeV"/>
       <property name="RESOLUTIONSCALE" value="5"/>
       <property name="FASTTIMECONSTANT" value="20" unit="ns"/>
       <property name="YIELDRATIO" value="1"/>
@@ -1304,7 +1304,7 @@ not distinguish between 'original' photons and WLS photons. -->
         <ve energy="2.398"  value="4.059"/>
         <ve energy="2.398"  value="0.25"/>
       </propertyvector>
-      <propertyvector name="ABSLENGTH" unit="m" energyunit="eV">
+      <propertyvector name="ABSLENGTH" unit="cm" energyunit="eV">
         <ve energy="1.84" value="50"/>
         <ve energy="2.44" value="50"/>
       </propertyvector>

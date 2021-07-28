@@ -30,7 +30,6 @@
 /gate/plate/geometry/setPathToSTLFile               STLObjects/PlateV2.stl
 /gate/plate/placement/setTranslation                0 0 0 mm
 /gate/plate/setMaterial                             PlateScintX
-/gate/plate/vis/setColor    cyan
 
 #Fibers
 /gate/world/daughters/name                                        fibers
@@ -38,7 +37,6 @@
 /gate/fibers/placement/setTranslation                         0 0 0 mm
 /gate/fibers/geometry/setPathToSTLFile                        STLObjects/FibersV2.stl
 /gate/fibers/setMaterial                                      FiberScintX
-/gate/fibers/vis/setColor    yellow
 
 #Detector Base
 /gate/world/daughters/name                OpticalSystem_1
@@ -172,15 +170,15 @@
 /gate/actor/MyActor3/energySpectrum/setEmax               5 eV
 /gate/actor/MyActor3/energySpectrum/setNumberOfBins       2000
 
-#/gate/actor/addActor                        DoseActor   initEdep
-#/gate/actor/initEdep/saveEveryNEvents       1
-#/gate/actor/initEdep/enableEdep             true
-#/gate/actor/initEdep/enableDose             true
-#/gate/actor/initEdep/enableNumberOfHits     true
-#/gate/actor/initEdep/attachTo               plate
-#/gate/actor/initEdep/setResolution          40 24 40
-#/gate/actor/initEdep/stepHitType            random
-#/gate/actor/initEdep/save                   Output/initEdep.txt
+/gate/actor/addActor                        DoseActor   initEdep
+/gate/actor/initEdep/saveEveryNEvents       1
+/gate/actor/initEdep/enableEdep             true
+/gate/actor/initEdep/enableDose             true
+/gate/actor/initEdep/enableNumberOfHits     true
+/gate/actor/initEdep/attachTo               plate
+/gate/actor/initEdep/setResolution          40 24 40
+/gate/actor/initEdep/stepHitType            random
+/gate/actor/initEdep/save                   Output/initEdep.txt
 
 /gate/actor/addActor    ParticleInVolumeActor        ParticleCounter2
 /gate/actor/ParticleCounter2/save                    Output/ParticleCounter2.txt
@@ -243,14 +241,14 @@
 /gate/source/BeamS/gps/halfz         1 mm
 /gate/source/BeamS/gps/centre        .0 .0 .0 m
 /gate/source/BeamS/gps/angtype       iso
-/gate/source/BeamS/gps/mintheta      75 deg
-/gate/source/BeamS/gps/maxtheta      105 deg
-/gate/source/BeamS/gps/minphi        75 deg
-/gate/source/BeamS/gps/maxphi        105 deg
+/gate/source/BeamS/gps/mintheta      80 deg
+/gate/source/BeamS/gps/maxtheta      100 deg
+/gate/source/BeamS/gps/minphi        80 deg
+/gate/source/BeamS/gps/maxphi        100 deg
 /gate/source/BeamS/attachTo          sourceBlock
 #/gate/source/BeamS/gps/polarization  1 0 0
 
-/gate/application/setTotalNumberOfPrimaries 1
+/gate/application/setTotalNumberOfPrimaries 10
 
 
 #-
