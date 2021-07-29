@@ -1,15 +1,15 @@
 #---------------------------------------
 #Visualize
 #---------------------------------------
-/vis/open                               OGL
-/vis/drawVolume
-/vis/viewer/set/viewpointThetaPhi       90 90
+#/vis/open                               OGL
+#/vis/drawVolume
+#/vis/viewer/set/viewpointThetaPhi       90 90
 #/vis/scene/add/axes
-/tracking/storeTrajectory                       1
-/vis/scene/add/trajectories
-/vis/ogl/set/displayListLimit           10000000
-/vis/scene/endOfEventAction             accumulate
-/vis/scene/endOfEventAction accumulate  5000
+#/tracking/storeTrajectory                       1
+#/vis/scene/add/trajectories
+#/vis/ogl/set/displayListLimit           10000000
+#/vis/scene/endOfEventAction             accumulate
+#/vis/scene/endOfEventAction accumulate  5000
 
 #/control/execute Macro/Verbose.mac
 #---------------------------------------
@@ -19,7 +19,7 @@
 /gate/world/geometry/setXLength         1 m
 /gate/world/geometry/setYLength         1 m
 /gate/world/geometry/setZLength         1 m
-/gate/world/vis/setVisible 0
+#/gate/world/vis/setVisible 0
 
 #---------------------------------------------------
 #Blocks
@@ -178,16 +178,16 @@
 /gate/actor/initEdep/attachTo               plate
 /gate/actor/initEdep/setResolution          40 24 40
 /gate/actor/initEdep/stepHitType            random
-/gate/actor/initEdep/save  NewRunOutputs/output20/h03_e1000_edep.txt
+/gate/actor/initEdep/save  NewRunOutputs/output26/h03_e10_edep.txt
 
 /gate/actor/addActor    ParticleInVolumeActor        ParticleCounter2
-/gate/actor/ParticleCounter2/save  NewRunOutputs/output20/h03_e1000_particle_counter_2.txt
+/gate/actor/ParticleCounter2/save  NewRunOutputs/output26/h03_e10_particle_counter_2.txt
 /gate/actor/ParticleCounter2/attachTo                detectorCrystal_2
 /gate/actor/ParticleCounter2/setResolution           1 8 20
 /gate/actor/ParticleCounter2/stepHitType             random
 
 /gate/actor/addActor    ParticleInVolumeActor        ParticleCounter1
-/gate/actor/ParticleCounter1/save  NewRunOutputs/output20/h03_e1000_particle_counter_1.txt
+/gate/actor/ParticleCounter1/save  NewRunOutputs/output26/h03_e10_particle_counter_1.txt
 /gate/actor/ParticleCounter1/attachTo                detectorCrystal_1
 /gate/actor/ParticleCounter1/setResolution           20 8 1
 /gate/actor/ParticleCounter1/stepHitType             random
@@ -249,7 +249,7 @@
 #/gate/source/BeamS/gps/polarization  1 0 0
 
 
-/gate/application/setTotalNumberOfPrimaries 1000
+/gate/application/setTotalNumberOfPrimaries 10
 
 
 #-
